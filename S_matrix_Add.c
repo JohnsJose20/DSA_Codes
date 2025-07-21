@@ -157,7 +157,7 @@ int main() {
 
    
     int transposeIndex = 1;
-    for (i = 0; i <= result[0][2]; i++) {
+    for (i = 1; i <= result[0][2]; i++) {
         transpose[transposeIndex][0] = result[i][1];  
         transpose[transposeIndex][1] = result[i][0];  
         transpose[transposeIndex][2] = result[i][2];  
@@ -166,7 +166,7 @@ int main() {
 
     
     printf("The Transpose of the Sparse Matrix is:\n");
-    for (i = 0; i <= transpose[0][2]; i++) {
+    for (i = 1; i <= transpose[0][2]; i++) {
         printf("%d\t%d\t%d\n", transpose[i][0], transpose[i][1], transpose[i][2]);
     }
 
