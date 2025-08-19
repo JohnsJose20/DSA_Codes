@@ -50,7 +50,7 @@ int main() {
 	
 	postfix[j] = '\0';
 	
-	printf("TPostfix expression is: %s \n", postfix);
+	printf("Postfix expression is: %s \n", postfix);
 	
 	return 0;
 }
