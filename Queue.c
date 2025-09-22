@@ -1,5 +1,10 @@
+/* AUTHORE: JOHNS JOSE
+   ROLL NO: 45
+   CLASS  : CSE A
+*/
+
 #include <stdio.h>
-#define MAX 5
+#define MAX 3
 
 int queue[MAX];
 int front = -1, rear = -1;
@@ -38,11 +43,46 @@ void display() {
 }
 
 int main() {
-    enqueue(10);
-    enqueue(20);
-    enqueue(30);
-    display();
-    dequeue();
-    display();
+    int choice, element;
+
+    printf("Menu:\n");
+    printf("1. Enqueue\n");
+    printf("2. Dequeue\n");
+    printf("3. Display\n");
+    printf("4. Exit\n");
+
+    while (1) {
+        printf("\nEnter your choice: ");
+        scanf("%d", &choice);
+
+        if (choice == 4) {
+            printf("Exiting program.\n");
+            break; 
+        }
+
+        switch(choice) {
+            case 1:
+                if (rear == MAX - 1) {
+                    printf("Queue is full, cannot enqueue!\n");
+                } else {
+                    printf("Enter the element to enqueue: ");
+                    scanf("%d", &element);
+                    enqueue(element);
+                }
+                break;
+
+            case 2:
+                dequeue();
+                break;
+
+            case 3:
+                display();
+                break;
+
+            default:
+                printf("Invalid choice, try again.\n");
+        }
+    }
+    
     return 0;
 }
